@@ -1,0 +1,85 @@
+body{
+    font-family: 'lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color:#353738;
+}
+
+/*BACKGROUND-IMAGE header yasmina*/
+header{
+    width: 100%;
+    height: 850px;
+    background-image: url("../pics/bike.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* disposition des photos dans le shop */
+.grid-photo-shop{
+    display: grid;
+    grid-template: 1fr 1fr / repeat(6, 1fr);
+}
+
+.trois-shop{
+    grid-column-start: 3;
+    grid-row-start:1;
+    grid-row: span 2;
+}
+
+.quatre-shop{
+    grid-column-start: 4;
+    grid-row-start:1;
+    grid-row: span 2;
+}
+
+.cinq-shop{
+    grid-column-start: 5;
+    grid-column: span 2;
+}
+.six-shop{
+    grid-column-start: 1;
+    grid-column: span 2;
+    grid-row-start: 2;
+}
+
+/* hover pour possibilite de selection */
+.grid-photo-shop img{
+    position: relative;
+    width: 100%;
+}
+
+.grid-photo-shop img:hover{
+    opacity: 0.3;
+}
+
+/* bouton shop sur fond noir */
+.btn-shop{
+    border: solid 1px lightgrey;
+    color: lightgray;
+    background-color: #353738;
+}
+
+.btn-shop:hover{
+    color:#353738;
+    background-color: lightgray;
+    border: #353738;
+}
+/* partie footer */
+.socialLink > .twitter:hover{
+    color:#1DA1F2;
+}
+
+.socialLink > .facebook:hover{
+    color:#4267B2;
+}
+
+.socialLink > .pinterest:hover{
+    color:#e60023;
+}
+
+.socialLink:hover{
+    transform: scale(1.5);
+    transition: 0.3s all ease-in-out;
+}
+
