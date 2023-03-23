@@ -1,5 +1,4 @@
 let accessoires = document.getElementsByName('accessories');
-let listToShow = document.getElementById('listToShow');
 let bikePrice = 0;
 let accPrice = 0;
 let bike = document.getElementById('bike');
@@ -57,6 +56,13 @@ function getBike() {
             imgBikeChoose.src = "./pics/velo5.jpg";
             imgChooseBike.src = "./pics/velo5.jpg";
             break;
+        default:
+            descriptionBike.innerHTML = "";
+            bikeDesc.innerHTML = "";
+            priceBike.innerHTML = "";
+            bikePrice = parseFloat(0);
+            imgBikeChoose.src = "./pics/velo-exemple.png";
+            imgChooseBike.src = "./pics/velo-exemple.png";
     }
     sumTotal(bikePrice, accPrice);
 }
@@ -84,48 +90,80 @@ function getAccessories() {
  */
 
 function showAccessory(accessoryChoose) {
+    let listToShow = document.getElementById('listToShow');
+    accPrice = 0;
     for (let i = 0; i < accessoryChoose.length; i++) {
         console.log(accessoryChoose[i]);
         switch (accessoryChoose[i].value) {
             case 'Selle':
-                listToShow.innerHTML = accessoryChoose[i].value;
-                accPrice = accessoryChoose[i].dataset.price + accPrice;
+                let selle = document.createElement('li');
+                let selleText = document.createTextNode(accessoryChoose[i].value);
+                selle.appendChild(selleText);
+                listToShow.appendChild(selle);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
                 break;
             case 'Guidon':
-                listToShow.innerHTML = accessoryChoose[i].value;
-                accPrice = accessoryChoose[i].dataset.price + accPrice;
+                let Guidon = document.createElement('li');
+                let GuidonText = document.createTextNode(accessoryChoose[i].value);
+                Guidon.appendChild(GuidonText);
+                listToShow.appendChild(Guidon);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
                 break;
             case 'Freins':
-                listToShow.innerHTML = accessoryChoose[i].value;
-                accPrice = accessoryChoose[i].dataset.price + accPrice;
+                let Freins = document.createElement('li');
+                let FreinsText = document.createTextNode(accessoryChoose[i].value);
+                Freins.appendChild(FreinsText);
+                listToShow.appendChild(Freins);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
                 break;
             case 'Pneu':
-                listToShow.innerHTML = accessoryChoose[i].value;
-                accPrice = accessoryChoose[i].dataset.price + accPrice;
+                let Pneu = document.createElement('li');
+                let PneuText = document.createTextNode(accessoryChoose[i].value);
+                Pneu.appendChild(PneuText);
+                listToShow.appendChild(Pneu);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
                 break;
             case 'Lumières':
-                listToShow.innerHTML = accessoryChoose[i].value;
-                accPrice = accessoryChoose[i].dataset.price + accPrice;
+                let Lumières = document.createElement('li');
+                let LumièresText = document.createTextNode(accessoryChoose[i].value);
+                Lumières.appendChild(LumièresText);
+                listToShow.appendChild(Lumières);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
                 break;
             case 'Casque':
-                listToShow.innerHTML = accessoryChoose[i].value;
-                accPrice = accessoryChoose[i].dataset.price + accPrice;
+                let Casque = document.createElement('li');
+                let CasqueText = document.createTextNode(accessoryChoose[i].value);
+                Casque.appendChild(CasqueText);
+                listToShow.appendChild(Casque);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
                 break;
             case 'Chaines':
-                listToShow.innerHTML = accessoryChoose[i].value;
-                accPrice = accessoryChoose[i].dataset.price + accPrice;
+                let Chaines = document.createElement('li');
+                let ChainesText = document.createTextNode(accessoryChoose[i].value);
+                Chaines.appendChild(ChainesText);
+                listToShow.appendChild(Chaines);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
                 break;
             case 'Pédales':
-                listToShow.innerHTML = accessoryChoose[i].value;
-                accPrice = accessoryChoose[i].dataset.price + accPrice;
+                let pedales = document.createElement('li');
+                let pedalesText = document.createTextNode(accessoryChoose[i].value);
+                pedales.appendChild(pedalesText);
+                listToShow.appendChild(pedales);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
                 break;
             case 'Garde-Boue':
-                listToShow.innerHTML = accessoryChoose[i].value;
-                accPrice = accessoryChoose[i].dataset.price + accPrice;
+                let garde = document.createElement('li');
+                let gardeText = document.createTextNode(accessoryChoose[i].value);
+                garde.appendChild(gardeText);
+                listToShow.appendChild(garde);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
                 break;
             case 'Cadenas':
-                listToShow.innerHTML = accessoryChoose[i].value;
-                accPrice = accessoryChoose[i].dataset.price + accPrice;
+                let cadenas = document.createElement('li');
+                let cadenasText = document.createTextNode(accessoryChoose[i].value);
+                cadenas.appendChild(cadenasText);
+                listToShow.appendChild(cadenas);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
                 break;
         }
     }
@@ -140,6 +178,6 @@ function showAccessory(accessoryChoose) {
 
 function sumTotal(bikePrice, accPrice) {
     let sum = document.getElementById('sum');
-    let priceTotal = parseFloat(bikePrice) + parseFloat(accPrice);
-    sum.innerHTML = priceTotal + " CHF";
+    let priceTotal = parseInt(bikePrice) + parseInt(accPrice);
+    sum.innerHTML = parseInt(priceTotal) + " CHF";
 }
