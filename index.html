@@ -186,43 +186,37 @@
     </section>
     <!-- Formulaire Commande Daniel et Mirco -->
     <section id="select-bike">
-        <div class="container text-center">
+        <div class="container-fluid text-center">
             <div class="row">
                 <div class="col-sm-12">
                     <img src="pics/velo1.jpg" class="img-fluid" alt="velo vintage">
                 </div>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col">
-                            <select class="form-select" aria-label="Default select example">
-            <option selected>Sélectionner votre modèle</option>
-            <option value="1">Modèle 1</option>
-            <option value="2">Modèle 2</option>
-            <option value="3">Modèle 3</option>
-            <option value="4">Modèle 4</option>
-            <option value="5">Modèle 5</option>
-          </select>
-                        </div>
-                        <div class="col">
-                            <div class="row">
-                                <div class="col">
-                                    <button type="button" class="btn btn-secondary btn-sm mt-2">Valider votre sélection</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <select class="form-select" aria-label="Default select example">
+                          <option selected>Sélectionner votre modèle</option>
+                          <option value="1">Modèle 1</option>
+                          <option value="2">Modèle 2</option>
+                          <option value="3">Modèle 3</option>
+                          <option value="4">Modèle 4</option>
+                          <option value="5">Modèle 5</option>
+                        </select>
                 </div>
-                <div class="container text-center mt-3">
-                    <div class="row">
-                        <div class="col">
-                            <p>Description ce modele est el bv-34 un modele qui permet balade courses et autre devenez theking of the road</p>
-                        </div>
-                        <div class="col">
-                            <p>850.-</p>
-                        </div>
-
-                    </div>
+            </div>
+        </div>
+        <div class="container text-center mt-3">
+            <div class="row">
+                <div class="col">
+                    <p id="descriptionBike"></p>
                 </div>
+                <div class="col" id="priceBike">
+                    <p></p>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Commande kelian et yasmina -->
     <div class="container-fluid">
@@ -268,42 +262,21 @@
             </div>
         </div>
     </div>
-
-    <section>
-        <div class="form">
-            <h1>lslsl</h1>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nulla natus optio perferendis tempore id, voluptatum aut enim obcaecati, hic provident aliquid quia beatae minus quod labore incidunt exercitationem nesciunt. Explicabo, dolor
-                voluptatem in expedita officiis id quaerat sed? Doloremque repudiandae ullam laudantium debitis sequi, libero quaerat esse? Voluptates, quas ea est quae minus nobis vitae aspernatur praesentium. Accusantium, consequuntur.
-            </p>
-        </div>
-    </section>
-
     <!--Partie résultat de la commande-->
     <section id="result">
-        <div class="container-fluid text-center" id="result">
+        <div class="container-fluid text-center">
             <div class="row align-items-center">
                 <div class="col-sm-4">
                     <img src="./pics/velo-exemple.png" class="img-fluid w-100">
                     <h5>Card title</h5>
                 </div>
                 <div class="col-sm-4">
-                    <ul>
-                        <li>choix vélo</li>
-                        <li>accessoire1</li>
-                        <li>accessoire2</li>
-                        <li>accessoire3</li>
-                        <li>accessoire4</li>
-                        <li>accessoire5</li>
-                        <li>accessoire6</li>
-                        <li>accessoire7</li>
-                        <li>accessoire8</li>
-                        <li>accessoire9</li>
-                        <li>accessoire10</li>
+                    <ul id="listResult">
+
                     </ul>
                 </div>
                 <div class="col-sm-4">
-                    <h3>Commandes totals. <span>6000chf</span></h3>
+                    <h3>Montant Total: <span></span></h3>
                 </div>
             </div>
         </div>
