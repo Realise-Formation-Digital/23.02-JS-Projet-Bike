@@ -2,14 +2,16 @@ let accessoires = document.getElementsByName('accessories');
 console.log(accessoires);
 let bikePrice = 0;
 let accPrice = 0;
-
+let bike = document.getElementsById('bike');
+console.log(bike);
 /**
  * function to get bike
- * @param {string} - the value of the option
  */
 
-function getBike(value) {
-    console.log(value);
+function getBike() {
+    let bikeChoose = bike.options[bike.selectedIndex].value;
+    let descBike = bike.options[bike.selectedIndex].text;
+    console.log(bikeChoose, descBike);
     switch (value) {
         case '1':
             console.log('1');
