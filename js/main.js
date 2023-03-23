@@ -71,8 +71,6 @@ function getBike() {
  *Get the accessories
  */
 
-console.log(accessoires);
-
 function getAccessories() {
     let accessoryChoose = [];
     for (let i = 0; i < accessoires.length; i++) {
@@ -91,6 +89,7 @@ function getAccessories() {
 
 function showAccessory(accessoryChoose) {
     let listToShow = document.getElementById('listToShow');
+    removeAllChildNodes(listToShow);
     accPrice = 0;
     for (let i = 0; i < accessoryChoose.length; i++) {
         console.log(accessoryChoose[i]);
@@ -168,6 +167,18 @@ function showAccessory(accessoryChoose) {
         }
     }
     sumTotal(bikePrice, accPrice);
+}
+
+
+/**
+ * clear the list for new choice
+ * @param {element} - the element parent child to remove
+ */
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
 }
 
 /**
