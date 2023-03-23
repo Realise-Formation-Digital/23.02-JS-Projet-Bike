@@ -189,14 +189,14 @@
         <div class="container-fluid text-center">
             <div class="row">
                 <div class="col-sm-12">
-                    <img src="pics/velo1.jpg" class="img-fluid" alt="velo vintage">
+                    <img src="./pics/velo-exemple.png" class="img-fluid w-100" id="imgBikeChoose">
                 </div>
             </div>
         </div>
         <div class="container text-center">
             <div class="row">
                 <div class="col-6">
-                    <select class="form-select" id="bike">
+                    <select class="form-select" name="bike" id="bike">
                       <option selected>Sélectionner votre modèle</option>
                       <option value="1">Modèle 1</option>
                       <option value="2">Modèle 2</option>
@@ -228,58 +228,57 @@
             <div class="col-sm-4 offset-3">
                 <ul>
                     <li class="mx-1">
-                        <img src="pics/kelian/selle.jpg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Selle" data-price=""> <label for=""> Selle </label>
+                        <img src="pics/kelian/selle.jpg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Selle" data-price="50"> <label for=""> Selle </label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/guidon.jpg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Guidon" data-price=""> <label for=""> Guidon </label>
+                        <img src="pics/kelian/guidon.jpg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Guidon" data-price="130"> <label for=""> Guidon </label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/freinage-velo.avif" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Freins" data-price=""> <label for=""> Freins </label>
+                        <img src="pics/kelian/freinage-velo.avif" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Freins" data-price="30"> <label for=""> Freins </label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/jantes-de-trekking.jpg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Pneu" data-price=""> <label for=""> Pneu </label>
+                        <img src="pics/kelian/jantes-de-trekking.jpg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Pneu" data-price="45"> <label for=""> Pneu </label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/lumiere_.jpg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Lumières" data-price=""> <label for=""> Lumières </label>
+                        <img src="pics/kelian/lumiere_.jpg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Lumières" data-price="20"> <label for=""> Lumières </label>
                     </li>
                 </ul>
             </div>
             <div class="col-sm-4">
                 <ul>
                     <li class="mx-1">
-                        <img src="pics/kelian/casque.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Casque" data-price=""> <label for=""> Casque </label>
+                        <img src="pics/kelian/casque.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Casque" data-price="120"> <label for=""> Casque </label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/chaines.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Chaines" data-price=""> <label for=""> Chaines </label>
+                        <img src="pics/kelian/chaines.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Chaines" data-price="130"> <label for=""> Chaines </label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/pedale.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Pédales" data-price=""> <label for=""> Pedales </label>
+                        <img src="pics/kelian/pedale.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Pédales" data-price="60"> <label for=""> Pedales </label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/gardeboue.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Garde-Boue" data-price=""> <label for=""> Garde de boue </label>
+                        <img src="pics/kelian/gardeboue.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Garde-Boue" data-price="40"> <label for=""> Garde de boue </label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/cadena.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Cadenas" data-price=""> <label for=""> Cadena </label>
+                        <img src="pics/kelian/cadena.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1" name="accessories" value="Cadenas" data-price="100"> <label for=""> Cadena </label>
                     </li>
                 </ul>
             </div>
         </div>
+        <button class="btn btn-outline-success mx-auto" type="submit" onclick="getAccessories()">Valider</button>
     </div>
     <!--Partie résultat de la commande-->
     <section id="result">
         <div class="container-fluid text-center">
             <div class="row align-items-center">
                 <div class="col-sm-4">
-                    <img src="./pics/velo-exemple.png" class="img-fluid w-100">
-                    <h5>Card title</h5>
+                    <img src="./pics/velo-exemple.png" class="img-fluid w-100" id="imgChooseBike">
+                    <h5 id="bikeDesc"></h5>
                 </div>
-                <div class="col-sm-4">
-                    <ul id="listResult">
+                <div class="col-sm-4" id="listToShow">
 
-                    </ul>
                 </div>
                 <div class="col-sm-4">
-                    <h3>Montant Total: <span></span></h3>
+                    <h3>Montant Total: <span id="sum"></span></h3>
                 </div>
             </div>
         </div>
