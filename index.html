@@ -45,6 +45,12 @@
                         <li class="nav-item my-auto mx-3 fw-bold">
                             <a class="nav-link" aria-current="page" href="index.html#shop">SHOP</a>
                         </li>
+                        <!--Navbar-Point-->
+                        <span class="my-auto mx-3">.</span>
+                        <!--Navbar-buy a bike button-->
+                        <li class="nav-item my-auto mx-3 fw-bold">
+                            <a class="nav-link" aria-current="page" href="index.html#commande">BUY A BIKE</a>
+                        </li>
                         <!--Navbar-POINT button-->
                         <span class="my-auto mx-3">.</span>
                         <!--Navbar-CONTACT button-->
@@ -208,16 +214,16 @@
         <button class="text-uppercase m-5 p-3 btn-shop">discover the shop</button>
     </section>
     <!-- Formulaire Commande Daniel et Mirco -->
-    <section>
+    <section id="commande" class="mt-1">
         <div class="container-fluid text-center m-0">
             <div class="row">
                 <div class="col-sm-12 p-0">
-                    <img id="imgid" src="pics/velo-exemple.png" class="img-fluid w-100 p-0" alt="velo vintage">
+                    <img id="imgid" src="pics/vélo-exemple.png" class="img-fluid w-50 p-0 rounded-5" alt="velo vintage">
                 </div>
                 <div class="container text-center">
                     <div class="row">
                         <div class="col-sm-8">
-                            <select class="form-select" aria-label="Default select example" id="bike">
+                            <select class="form-select-lg my-2" aria-label="Default select example" id="bike">
                                 <option selected>Sélectionner votre modèle</option>
                                 <option value="1">UH-3 ce modèle vous offrira les sensations du tour de france.</option>
                                 <option value="2">BH-9 ce modèle vous offrira compfort et le respect des autres become
@@ -230,27 +236,27 @@
                             </select>
                         </div>
                         <div class="col-sm-4">
-                            <button class="btn btn-outline-success" type="submit" onclick="change('3')">Valider</button>
+                            <button class="btn btn-success" type="submit" onclick="change()">Valider votre vélo</button>
                         </div>
                     </div>
                 </div>
                 <div class="container text-center mt-3">
                     <div class="row">
-                        <div class="col">
-                            <p id="message"></p>
+                        <div class="col-sm-8">
+                            <p id="message" class="fs-3 text-primary-emphasis"></p>
                         </div>
-                        <div class="col">
-                            <p id="prix"></p>
+                        <div class="col-sm-4">
+                            <p id="prix" class="fs-2 text-success"></p>
                         </div>
 
                     </div>
                 </div>
     </section>
     <!-- Commande kelian et yasmina -->
-    <div class="container-fluid bg-light py-2">
-        <h2 class="text-center">Choix des accesoires</h2>
+    <div class="container-fluid bg-light py-3">
+        <h2 class="text-center mb-5 fs-2 fw-light">Choix des accesoires</h2>
         <div class="row">
-            <div class="col-sm-4 offset-sm-2">
+            <div class="col-sm-4 offset-sm-3">
                 <ul>
                     <li class="mx-1">
                         <img src="pics/kelian/selle.jpg" alt="" class="mx-1 img_acc"> <input type="checkbox"
@@ -313,15 +319,15 @@
                 </ul>
             </div>
             <!--Submit button-when clicked do the function checkeveryitems -->
-            <div class="d-flex justify-content-center align-items-center mx-auto my-2">
-                <button class="btn btn-outline-success"onclick="checkEverything();">submit</button>
+            <div class="d-flex justify-content-center align-items-center mx-auto my-2">    
+                <button class="btn btn-success mt-3"onclick="checkEverything();">Valider vos accessoires</button>
             </div>
                 <!--Partie résultat de la commande-->
             <section id="result">
                 <div class="container-fluid text-center">
                     <div class="row align-items-center">
                         <div class="col-sm-4">
-                            <img src="./pics/velo-exemple.png" class="img-fluid w-100" id="imgChooseBike">
+                            <img src="./pics/vélo-exemple.png" class="img-fluid w-100 rounded-5" id="imgChooseBike">
                             <h5 id="bikeDesc"></h5>
                         </div>
                         <div class="col-sm-4">
