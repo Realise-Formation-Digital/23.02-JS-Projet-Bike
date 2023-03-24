@@ -1,4 +1,4 @@
-let bikeprice = [];
+let bikeprice = 0;
 console.log(bikeprice)
 
 
