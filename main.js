@@ -4,7 +4,11 @@ let bikeprice = 0;
 let accPrice = 0;
 
 
-
+//Function change made with love by Daniel and Mirco
+//Définir les variables prix messades et img
+//Reflexion sur la function a utiliser test avec une function par boutton d'option mais nous sommes revenu sur la function switch car nous ne stockions aucunes valeurs
+//creation de la variables bikeschoose par sylvain qui va définir le paramatres pour le switch et qui vaut à l'option choisis
+//But changer la description de l'article du prix et l'image en fonction du choix selectionner par l'utilisateur
 function change() {
     let bikeChoose = bike.options[bike.selectedIndex].value;
     let descBike = bike.options[bike.selectedIndex].text;
