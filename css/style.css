@@ -60,6 +60,13 @@ header{
     background-color: #353738;
 }
 
+.accessoires{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+
 .btn-shop:hover{
     color:#353738;
     background-color: lightgray;
@@ -83,3 +90,8 @@ header{
     transition: 0.3s all ease-in-out;
 }
 
+.img_acc {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
