@@ -2,14 +2,15 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet-Bike</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet-Bike</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -250,21 +251,29 @@
             <div class="col-sm-4">
                 <ul>
                     <li class="mx-1">
-                        <img src="pics/kelian/casque.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1"> <label for=""> Casque </label>
+                        <img src="pics/kelian/casque.jpeg" alt="" class="mx-1 img_acc"> <input class="mx-1" type="checkbox" value="Casque" data-price="100" id="accessoire_1" name="accessoires"><label for="casque">casque
+                          100 chf</label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/chaines.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1"> <label for=""> Chaines </label>
+                        <img src="pics/kelian/chaines.jpeg" alt="" class="mx-1 img_acc"> <input class="mx-1" type="checkbox" value="chaine-velo" data-price="20" id="accessoire_2" name="accessoires"><label for="chaîne">Chaîne à
+                          pédaler 20 chf</label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/pedale.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1"> <label for=""> Pedales </label>
+                        <img src="pics/kelian/pedale.jpeg" alt="" class="mx-1 img_acc"> <input class="mx-1" type="checkbox" value="pédale" data-price="12,65" id="accessoire_3" name="accessoires"><label for="pédale">pédale 12,68 chf</label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/gardeboue.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1"> <label for=""> Garde de boue </label>
+                        <img src="pics/kelian/gardeboue.jpeg" alt="" class="mx-1 img_acc"> <input class="mx-1" type="checkbox" value="garde-boue" data-price="32" id="accessoire_4" name="accessoires"><label for="garde boue">garde
+                          boue 32 chf</label>
                     </li>
                     <li class="mx-1">
-                        <img src="pics/kelian/cadena.jpeg" alt="" class="mx-1 img_acc"> <input type="checkbox" class="mx-1"> <label for=""> Cadena </label>
+                        <img src="pics/kelian/cadena.jpeg" alt="" class="mx-1 img_acc"> <input class="mx-1" type="checkbox" value="cadena" data-price="54.5" id="accessoire_5" name="accessoires"><label for="cadena">cadena
+                          54.90 chf</label>
                     </li>
                 </ul>
+                <!--Submit button-when clicked do the function checkeveryitems -->
+            <button onclick="checkEverything();">submit</button>
+            <div class="col align-self-end col sm-2 offset-3">
+            <h1 id="result">prix</h1>
             </div>
         </div>
     </div>
@@ -345,6 +354,7 @@
             </div>
         </div>
     </footer>
+    <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
