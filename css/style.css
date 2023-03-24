@@ -69,6 +69,20 @@ header {
     background-color: #353738;
 }
 
+.accessoires{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+
+.accessoires{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+
 .btn-shop:hover {
     color: #353738;
     background-color: lightgray;
