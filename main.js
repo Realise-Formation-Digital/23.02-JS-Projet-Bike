@@ -63,8 +63,8 @@ function change() {
             prix.innerHTML = "";
             bikeprice = 0;
             messagedes.innerHTML = 'Veuillez choisir un modèle';
-            img.src = "pics/velo-exemple.png";
-            imgChooseBike.src = "./pics/velo-exemple.png";
+            img.src = "pics/vélo-exemple.png";
+            imgChooseBike.src = "./pics/vélo-exemple.png";
     }
     sumTotal(bikeprice, accPrice);
 }
