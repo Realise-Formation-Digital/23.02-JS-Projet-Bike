@@ -78,6 +78,10 @@ function checkEverything() {
     showAccessory(accessoryChoose);
 }
 
+/**
+ * function to show the list 
+ * @param {array} - for accessoryChoose checkEverything() 
+ */
 
 /**
  * function to show the list 
