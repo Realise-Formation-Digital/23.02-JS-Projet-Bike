@@ -1,4 +1,4 @@
-const accessoires = document.getElementsByName("accessoires");
+const accessoires = document.getElementsByName("accessories");
 let bike = document.getElementById('bike');
 let bikeprice = 0;
 let accPrice = 0;
@@ -69,10 +69,112 @@ function change() {
  * function that check accessories selected 
  */
 function checkEverything() {
+    let accessoryChoose = [];
     for (let i = 0; i < accessoires.length; i++) {
-        if (accessoires[i].checked) {
-            console.log(accessoires[i]);
+        if (accessoires[i].checked === true) {
+            accessoryChoose.push(accessoires[i]);
         }
+    }
+    showAccessory(accessoryChoose);
+}
+
+
+/**
+ * function to show the list 
+ * @param {array} - for accessoryChoose checkEverything() 
+ */
+
+function showAccessory(accessoryChoose) {
+    let listToShow = document.getElementById('listToShow');
+    removeAllChildNodes(listToShow);
+    accPrice = 0;
+    for (let i = 0; i < accessoryChoose.length; i++) {
+        console.log('boucle de selection', accessoryChoose[i]);
+        switch (accessoryChoose[i].value) {
+            case 'Selle':
+                let selle = document.createElement('li');
+                let selleText = document.createTextNode(accessoryChoose[i].value);
+                selle.appendChild(selleText);
+                listToShow.appendChild(selle);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
+                break;
+            case 'Guidon':
+                let Guidon = document.createElement('li');
+                let GuidonText = document.createTextNode(accessoryChoose[i].value);
+                Guidon.appendChild(GuidonText);
+                listToShow.appendChild(Guidon);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
+                break;
+            case 'Freins':
+                let Freins = document.createElement('li');
+                let FreinsText = document.createTextNode(accessoryChoose[i].value);
+                Freins.appendChild(FreinsText);
+                listToShow.appendChild(Freins);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
+                break;
+            case 'Pneu':
+                let Pneu = document.createElement('li');
+                let PneuText = document.createTextNode(accessoryChoose[i].value);
+                Pneu.appendChild(PneuText);
+                listToShow.appendChild(Pneu);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
+                break;
+            case 'Lumières':
+                let Lumières = document.createElement('li');
+                let LumièresText = document.createTextNode(accessoryChoose[i].value);
+                Lumières.appendChild(LumièresText);
+                listToShow.appendChild(Lumières);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
+                break;
+            case 'Casque':
+                let Casque = document.createElement('li');
+                let CasqueText = document.createTextNode(accessoryChoose[i].value);
+                Casque.appendChild(CasqueText);
+                listToShow.appendChild(Casque);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
+                break;
+            case 'chaine-velo':
+                let Chaines = document.createElement('li');
+                let ChainesText = document.createTextNode(accessoryChoose[i].value);
+                Chaines.appendChild(ChainesText);
+                listToShow.appendChild(Chaines);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
+                break;
+            case 'pédale':
+                let pedales = document.createElement('li');
+                let pedalesText = document.createTextNode(accessoryChoose[i].value);
+                pedales.appendChild(pedalesText);
+                listToShow.appendChild(pedales);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
+                break;
+            case 'garde-boue':
+                let garde = document.createElement('li');
+                let gardeText = document.createTextNode(accessoryChoose[i].value);
+                garde.appendChild(gardeText);
+                listToShow.appendChild(garde);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
+                break;
+            case 'cadena':
+                let cadenas = document.createElement('li');
+                let cadenasText = document.createTextNode(accessoryChoose[i].value);
+                cadenas.appendChild(cadenasText);
+                listToShow.appendChild(cadenas);
+                accPrice = parseInt(accessoryChoose[i].dataset.price) + parseInt(accPrice);
+                break;
+        }
+    }
+    sumTotal(bikeprice, accPrice);
+}
+
+
+/**
+ * clear the list for new choice
+ * @param {element} - the element parent child to remove
+ */
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
     }
 }
 
